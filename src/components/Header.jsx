@@ -4,14 +4,14 @@ import { AppBtn } from "../style";
 import { generateNumber } from "../utils";
 import blueDice1 from "../assets/dice-blue-1.svg";
 
-const Header = ({ changeDice }) => {
+const Header = ({ changeDice, reset }) => {
   return (
     <>
       <AppLogo src={logo} />
       <AppTitle>주사위 게임</AppTitle>
       <div>
         <BlueBtn onClick={changeDice}>던지기</BlueBtn>
-        <RedBtn>처음부터</RedBtn>
+        <RedBtn onClick={reset}>처음부터</RedBtn>
       </div>
     </>
   );

@@ -22,9 +22,16 @@ const App = () => {
     setOtherGameHistory([...otherGameHistory, otherNum]);
   };
 
+  const reset = () => {
+    setCurrentDice(blueDice1);
+    setOtherDice(redDice1);
+    setGameHistory([]);
+    setOtherGameHistory([]);
+  };
+
   return (
     <AppStyle>
-      <Header changeDice={onChaneDice} />
+      <Header changeDice={onChaneDice} reset={reset} />
       <Boards
         dice={currentDice}
         otherDice={otherDice}
